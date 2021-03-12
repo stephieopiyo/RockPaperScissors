@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+    font-size: 15pt;
+    font-family: 'Montserrat', serif;
+    height: 100%;
+    background: linear-gradient(#1dba0f, #0c7003);
+    background-repeat: no-repeat;
+    color: #ccc;
+}
+.choices {
+  margin-top: 30%;
+  display: flex;
+  justify-content: center;
+ 
+}
+.choice {
+  border: none;
+  outline: none;
+  cursor:pointer;
+  margin: 10px;
+  background: none;
+  font-size: 3rem;
+  transition: 100ms;
+  
+}
+.choice:hover {
+  transform: scale(1.2);
+}
+.scores {
+  display: grid;
+  margin-top: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.results {
+  font-size: 1rem;
+  margin-left: .1rem;
+}
