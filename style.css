@@ -42,3 +42,9 @@ body {
   font-size: 1rem;
   margin-left: .1rem;
 }
+.winner{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}

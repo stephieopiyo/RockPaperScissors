@@ -16,19 +16,20 @@ let Choices = [
   }
   
 ];
+let winner = document.querySelector('.winner');
 
 let choicesBtn = document.querySelectorAll('.choice');
 
 choicesBtn.forEach(choicebtn => { choicebtn.addEventListener('click', e => { 
   const choiceName = choicebtn.dataset.choices;
   const choice = Choices.find(choice => choice.name === choiceName);
-//console.log(choiceName);
   yourSelection(choice);
 });
 });
 
 function yourSelection(choice){
   const computerSelection = randomSelection();
+  isWinner(choice, computerSelection);
   console.log(computerSelection);
 }
 
@@ -37,6 +38,14 @@ function randomSelection(){
   return Choices[randomIndex];
 }
 
-function checkWinner(){
-  
+function isWinner(player, computer){
+  if(player.beats === computer.name ){
+    winner.textContent = 'You Won!!!';
+  }
+  else if(computer.beats === player.name){
+    winner.textContent = 'Computer Won!!!';
+  }
+  else {
+    winner.textContent = 'You Drew!!!';
+  }
 }
