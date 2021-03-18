@@ -42,7 +42,7 @@ body {
   font-size: 1rem;
   margin-left: .1rem;
 }
-.winner{
+.winner-message {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;

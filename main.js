@@ -16,8 +16,9 @@ let Choices = [
   }
   
 ];
-let winner = document.querySelector('.winner');
-
+let winner = document.querySelector('.winner-message');
+let playerScore = document.querySelector('[data-player-score]');
+let computerScore = document.querySelector('[data-computer-score]');
 let choicesBtn = document.querySelectorAll('.choice');
 
 choicesBtn.forEach(choicebtn => { choicebtn.addEventListener('click', e => { 
@@ -41,9 +42,11 @@ function randomSelection(){
 function isWinner(player, computer){
   if(player.beats === computer.name ){
     winner.textContent = 'You Won!!!';
+    playerScore.innerText = Number(playerScore.innerText) + 1;
   }
   else if(computer.beats === player.name){
     winner.textContent = 'Computer Won!!!';
+    computerScore.innerText = Number(computerScore.innerText) + 1;
   }
   else {
     winner.textContent = 'You Drew!!!';
